@@ -1,8 +1,8 @@
 # Elevator-Control-Narrative
 A control narrative for a hypothetical elevator
 
-	9. By default, the elevator is in state 0, or idle and resting on floor 1
-	10. Once a floor is called or entered, the elevator moves to State 1 and the called floor is added to Table Delta F.
+	1. By default, the elevator is in state 0, or idle and resting on floor 1
+	2. Once a floor is called or entered, the elevator moves to State 1 and the called floor is added to Table Delta F.
 		a. Table Delta F is the list of all floors to stop at before the drive shifts to the opposite gear and the contents of Table Anti-Delta F are moved to Table Delta F.
 		b. As a floor is stopped at and moved on from, it is removed from Table Delta F
 		c. If an addition to Table Delta F would make the rate-of-change from the current floor to the next floor less than or equal to zero, that addition is added to Table Anti-Delta F.
@@ -11,7 +11,7 @@ A control narrative for a hypothetical elevator
 ![image](https://user-images.githubusercontent.com/81997990/124364798-a2861280-dbf8-11eb-9ec1-593e3d50566e.png)
 
 	
-	5. Emergencies are independent of the control narrative--it is reasonable to say the mechanism is entirely mechanical to reduce possibility of error.
+	3. Emergencies are independent of the control narrative--it is reasonable to say the mechanism is entirely mechanical to reduce possibility of error.
 		a. Can be triggered manually 
 			i. By someone pressing the corresponding button in the cabin
 				1) See 5.b.i-iii
@@ -19,12 +19,12 @@ A control narrative for a hypothetical elevator
 			i. Emergency lighting and other in-cabin alerts are turned on
 			ii. Cabin is put into audio contact with the front desk and local first responders.
 							
-	6. The correct distance to travel between stops uses two orthogonal and mutually complimentary methods.
+	4. The correct distance to travel between stops uses two orthogonal and mutually complimentary methods.
 		a. The distance between floors is a read-only variable, and the total distance to travel to the 'next' stop is calculated via multiplying the difference between the last stop and the next stop by the between-floor distance.
 		b. In addition, the control system has a camera that scans barcodes or QR codes on the inside of the shaft.
 			i. The control system thereby can make minor corrections by engaging the drive system until the 'stop here' graphical code aligns with the camera.
 			ii. This is for correcting mechanical elasticity as machines wear over time, making sure the cabin opens as level as possible with the floor for wheelchairs, dollies, hospital beds, the blind, the infirm, &c.
-	7. When the doors open--I imagine there's de facto standard code (available from the ISO, perhaps?) floating around for digitized elevator controls. But, for the sake of this exercise, let's hash it out…
+	5. When the doors open--I imagine there's de facto standard code (available from the ISO, perhaps?) floating around for digitized elevator controls. But, for the sake of this exercise, let's hash it out…
 		a. Once the control system reads the floor's QR code such it is level with the camera, the doors 'open until fully-open'.
 		b. They stay open for 30 seconds before closing automatically.
 		c. The doors use a mechanical system where, if anything jostles their inside surface, they re-run the 'open until fully-open' routine.
