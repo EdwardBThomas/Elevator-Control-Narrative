@@ -8,8 +8,6 @@ A control narrative for a hypothetical elevator
 		c. If an addition to Table Delta F would make the rate-of-change from the current floor to the next floor less than or equal to zero, that addition is added to Table Anti-Delta F.
 		d. When both Tables are empty, the elevator automatically changes to State 0
 			i. State 0 has read-only Table 0, containing Floor 1.
-![image](https://user-images.githubusercontent.com/81997990/124364798-a2861280-dbf8-11eb-9ec1-593e3d50566e.png)
-
 	
 	3. Emergencies are independent of the control narrative--it is reasonable to say the mechanism is entirely mechanical to reduce possibility of error.
 		a. Can be triggered manually 
@@ -17,8 +15,7 @@ A control narrative for a hypothetical elevator
 				1) See 5.b.i-iii
 		b. Standard practice for elevator fail-safe mechanisms is strictly mechanical; in this case, once the tensioner is triggered and the plugs/cams fired, the control system switches to State 11 automatically
 			i. Emergency lighting and other in-cabin alerts are turned on
-			ii. Cabin is put into audio contact with the front desk and local first responders.
-							
+			ii. Cabin is put into audio contact with the front desk and local first responders.							
 	4. The correct distance to travel between stops uses two orthogonal and mutually complimentary methods.
 		a. The distance between floors is a read-only variable, and the total distance to travel to the 'next' stop is calculated via multiplying the difference between the last stop and the next stop by the between-floor distance.
 		b. In addition, the control system has a camera that scans barcodes or QR codes on the inside of the shaft.
