@@ -26,4 +26,3 @@ A control narrative for a hypothetical elevator
 		b. They stay open for 30 seconds before closing automatically.
 		c. The doors use a mechanical system where, if anything jostles their inside surface, they re-run the 'open until fully-open' routine.
 			i. The doors can also use a digital system of laser tripwires to accomplish the same purpose, or provide a complimentary and orthogonal failsafe.
-![image](https://user-images.githubusercontent.com/81997990/124364341-be3be980-dbf5-11eb-8ecf-2b1a83a46cd8.png)
