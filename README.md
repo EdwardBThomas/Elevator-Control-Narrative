@@ -12,7 +12,7 @@ A control narrative for a hypothetical elevator
 	3. Emergencies are independent of the control narrative--it is reasonable to say the mechanism is entirely mechanical to reduce possibility of error.
 		a. Can be triggered manually 
 			i. By someone pressing the corresponding button in the cabin
-				1) See 5.b.i-iii
+				1) See 3.b.i-iii
 		b. Standard practice for elevator fail-safe mechanisms is strictly mechanical; in this case, once the tensioner is triggered and the plugs/cams fired, the control system switches to State 11 automatically
 			i. Emergency lighting and other in-cabin alerts are turned on
 			ii. Cabin is put into audio contact with the front desk and local first responders.							
