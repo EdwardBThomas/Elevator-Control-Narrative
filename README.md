@@ -1,32 +1,24 @@
 # Elevator-Control-Narrative
 A control narrative for a hypothetical elevator
 
-	1. By default, the elevator is in state 00, or idle and resting on floor 1
-	2. Once a floor is called or entered, the elevator moves to State 01 and the called floor is added to Table 01
-		a. Table 01 is the list of all floors to stop at before switching to State 10 and reading from Table 10
-			i. If Table 10 is empty, the elevator automatically changes to State 00
-		b. As a floor is stopped at and moved on from, it is removed from Table 01
-		c. If a floor is added that is less than the current-lowest floor, it is placed into Table 10.
-	3. Once the highest floor is 'read' from Table 01, the elevator switches to State 10 and reads from Table 10
-		a. Table 10 is the list of all floors to stop at before switching to State 01 and reading from Table 01
-			i. If Table 01 is empty, the elevator automatically changes to State 00
-		b. As a floor is stopped at and moved on from, it is removed from Table 10
-		c. If a floor is added that is more than the current-lowest floor, it is placed into Table 01
-		
-	4. Once Tables 01 and 10 are empty, the elevator changes to State 00 and reads from Table 00
-		a. Table 00 is read-only with one entry: floor 1.
-		b. Once a floor is called, the called floor is added to Table 01 and the elevator changes to State 01 again.
+	9. By default, the elevator is in state 0, or idle and resting on floor 1
+	10. Once a floor is called or entered, the elevator moves to State 1 and the called floor is added to Table Delta F.
+		a. Table Delta F is the list of all floors to stop at before the drive shifts to the opposite gear and the contents of Table Anti-Delta F are moved to Table Delta F.
+		b. As a floor is stopped at and moved on from, it is removed from Table Delta F
+		c. If an addition to Table Delta F would make the rate-of-change from the current floor to the next floor less than or equal to zero, that addition is added to Table Anti-Delta F.
+		d. When both Tables are empty, the elevator automatically changes to State 0
+			i. State 0 has read-only Table 0, containing Floor 1.
+![image](https://user-images.githubusercontent.com/81997990/124364798-a2861280-dbf8-11eb-9ec1-593e3d50566e.png)
+
 	
-	5. State 11 is reserved for emergencies
-		a. State 11 can be triggered manually 
+	5. Emergencies are independent of the control narrative--it is reasonable to say the mechanism is entirely mechanical to reduce possibility of error.
+		a. Can be triggered manually 
 			i. By someone pressing the corresponding button in the cabin
 				1) See 5.b.i-iii
 		b. Standard practice for elevator fail-safe mechanisms is strictly mechanical; in this case, once the tensioner is triggered and the plugs/cams fired, the control system switches to State 11 automatically
 			i. Emergency lighting and other in-cabin alerts are turned on
 			ii. Cabin is put into audio contact with the front desk and local first responders.
-			iii. The front desk of the building is sent an immediate alert with a secondary alert to local first responders.
-				1) If the front desk does not confirm a false alarm in one minute (or any other interval set by industry general practice), or confirms a positive alarm, the secondary alert is sent to local first responders.
-				
+							
 	6. The correct distance to travel between stops uses two orthogonal and mutually complimentary methods.
 		a. The distance between floors is a read-only variable, and the total distance to travel to the 'next' stop is calculated via multiplying the difference between the last stop and the next stop by the between-floor distance.
 		b. In addition, the control system has a camera that scans barcodes or QR codes on the inside of the shaft.
