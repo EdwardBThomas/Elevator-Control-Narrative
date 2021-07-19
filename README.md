@@ -45,6 +45,5 @@ A control narrative for a hypothetical elevator
 	5. C2: Delta F and Anti-Delta F are null
 		a. The system itself enters floor 1 or automatically calls floor 1
 			i. The script does not actually remember it's on floor 1--the camera inside the shaft scans the QR code, reads floor 1, engages the drive as necessary (which is not at all), and opens the door as necessary (which is not at all, as it is already open).
-![image](https://user-images.githubusercontent.com/81997990/126216934-811ac08f-0b55-4f92-9958-d3031dd40051.png)
 	
 ![image](https://user-images.githubusercontent.com/81997990/126215997-f0a98242-fa0f-41a3-8514-deb9d5ef1790.png)
