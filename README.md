@@ -28,22 +28,23 @@ A control narrative for a hypothetical elevator
 			i. The doors can also use a digital system of laser tripwires to accomplish the same purpose, or provide a complimentary and orthogonal failsafe.
 			
 ![image](https://user-images.githubusercontent.com/81997990/126215997-f0a98242-fa0f-41a3-8514-deb9d5ef1790.png)
-5 instances of change:
-	• A1: A floor is input into the control script.
-		○ Since there isn't another floor in either table, the rate of change is positive and the entry automatically goes into table Delta F.
-	• A2: A floor is input into the control script.
-		○ The script checks the new entry: if it would maintain a positive rate of change with the current floor (or the most-recent floor), the entry goes into table Delta F. If the rate of change would be negative, it would go into table Anti-Delta F.
-	• B: Delta F is null > change to Anti-Delta F
-		○ Once table Delta F no longer contains any entries, the drive system of the elevator changes gears and either of two things can happen:
-			§ The contents of table Anti-Delta F are moved to table Delta F
-			§ The labels of the two tables are switched.
-		○ The point is, with the drive's gear switched, the entries that would have previously created a negative rate of change would instead create a positive rate of change. The elevator can then use the same logic.
-	• C1: Delta F and Anti-Delta F are null
-		○ The system itself enters floor 1 or automatically calls floor 1
-			§ If the elevator was moving down previously, adding floor 1 maintains a positive rate of change
-			§ If the elevator was moving up previously, the entry goes into table Anti-Delta F
-				□ With table Delta-F empty, the tables are switched, the drive reverses, and the script just reads off floor 1.
-	• C2: Delta F and Anti-Delta F are null
-		○ The system itself enters floor 1 or automatically calls floor 1
-			§ The script does not actually remember it's on floor 1--the camera inside the shaft scans the QR code, reads floor 1, engages the drive as necessary (which is not at all), and opens the door as necessary (which is not at all, as it is already open).
+5 instances of change:5 instances of change:
+	A1: A floor is input into the control script.
+		Since there isn't another floor in either table, the rate of change is positive and the entry automatically goes into table Delta F.
+	A2: A floor is input into the control script.
+		The script checks the new entry: if it would maintain a positive rate of change with the current floor (or the most-recent floor), the entry goes into table Delta F. If the rate of change would be negative, it would go into table Anti-Delta F.
+	B: Delta F is null > change to Anti-Delta F
+		Once table Delta F no longer contains any entries, the drive system of the elevator changes gears and either of two things can happen:
+			The contents of table Anti-Delta F are moved to table Delta F
+			The labels of the two tables are switched.
+		The point is, with the drive's gear switched, the entries that would have previously created a negative rate of change would instead create a positive rate of change. The elevator can then use the same logic.
+	C1: Delta F and Anti-Delta F are null
+		The system itself enters floor 1 or automatically calls floor 1
+			If the elevator was moving down previously, adding floor 1 maintains a positive rate of change
+			If the elevator was moving up previously, the entry goes into table Anti-Delta F
+				With table Delta-F empty, the tables are switched, the drive reverses, and the script just reads off floor 1.
+	C2: Delta F and Anti-Delta F are null
+		The system itself enters floor 1 or automatically calls floor 1
+			The script does not actually remember it's on floor 1--the camera inside the shaft scans the QR code, reads floor 1, engages the drive as necessary (which is not at all), and opens the door as necessary (which is not at all, as it is already open).
+![image](https://user-images.githubusercontent.com/81997990/126216552-f00dca25-01e8-4a08-bd44-8be89ff13182.png)
 
