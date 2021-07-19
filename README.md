@@ -27,7 +27,6 @@ A control narrative for a hypothetical elevator
 		c. The doors use a mechanical system where, if anything jostles their inside surface, they re-run the 'open until fully-open' routine.
 			i. The doors can also use a digital system of laser tripwires to accomplish the same purpose, or provide a complimentary and orthogonal failsafe.
 			
-![image](https://user-images.githubusercontent.com/81997990/126215997-f0a98242-fa0f-41a3-8514-deb9d5ef1790.png)
 5 instances of change:5 instances of change:
 	A1: A floor is input into the control script.
 		Since there isn't another floor in either table, the rate of change is positive and the entry automatically goes into table Delta F.
@@ -46,5 +45,5 @@ A control narrative for a hypothetical elevator
 	C2: Delta F and Anti-Delta F are null
 		The system itself enters floor 1 or automatically calls floor 1
 			The script does not actually remember it's on floor 1--the camera inside the shaft scans the QR code, reads floor 1, engages the drive as necessary (which is not at all), and opens the door as necessary (which is not at all, as it is already open).
-![image](https://user-images.githubusercontent.com/81997990/126216552-f00dca25-01e8-4a08-bd44-8be89ff13182.png)
-
+		
+![image](https://user-images.githubusercontent.com/81997990/126215997-f0a98242-fa0f-41a3-8514-deb9d5ef1790.png)
